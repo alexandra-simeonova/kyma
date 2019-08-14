@@ -33,7 +33,7 @@ if [ "$1" == "$CI_FLAG" ]; then
 	buildEnv="env CGO_ENABLED=0 GOOS=linux GOARCH=amd64"
 fi
 
-${buildEnv} go build -o application-broker ./cmd/broker
+${buildEnv} go build -o main ./cmd/main
 
 goBuildResult=$?
 if [ ${goBuildResult} != 0 ]; then
